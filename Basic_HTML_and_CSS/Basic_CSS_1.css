@@ -1,0 +1,15 @@
+img {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+.center {
+		text-align: center;
+		}
+h1 {
+		color: gray;
+		}
+p {	
+		text-align: center;
+		color: MidnightBlue;
+}

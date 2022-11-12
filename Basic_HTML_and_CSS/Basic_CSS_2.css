@@ -1,0 +1,17 @@
+img {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+p {	
+		text-align: center;
+		color: teal;
+		background: azure;
+		font-size: 6;
+		font-weight: bold;
+}
+h2 {
+		background: black;
+		color: azure;
+		text-align: center;
+}
