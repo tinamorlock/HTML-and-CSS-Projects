@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Curl Power—Specialty Salon for Curly Hair in Phoenix, Arizona</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="OnePage.css">
+        
+        
+	</head>
+	<body>
+
+        <!-- NAVBAR -->
+
+        <div id="NavBar">
+        <div>
+            <ul class="nav">
+                <li><img class="logo" src="images/curl-power-logo.jpg" alt="Curl Power, Salon for Curly Hair in Phoenix, Arizona"></li>
+                <li ><a class="navi" href="#home"><h1>HOME </h1></a></li>
+                <li class="NavSep"></li>
+                <li><a class="navi" href="#gallery"><h1>GALLERY </h1></a></li>
+                <li class="NavSep"></li>
+                <li><a class="navi" href="#book"><h1>BOOK </h1></a></li>
+                <li class="NavSep"></li>
+                <li><a class="navi" href="#videos"><h1>VIDEOS</h1></a></li>
+              </ul>
+        </div>
+        </div>
+
+        <!-- STICKY NAVBAR -->
+
+        <script>
+            window.onscroll = function() {myFunction()};
+            
+            var navbar = document.getElementById("NavBar");
+            var sticky = NavBar.offsetTop;
+            
+            function myFunction() {
+              if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+              } else {
+                navbar.classList.remove("sticky");
+              }
+            }
+            </script>
+
+        <!-- HEADER IMAGE -->
+
+        <div id="home">
+            <img class="home" src="Images/curl-girl-header1.jpg" alt="Curl Power Salon">
+         </div>   
+         
+
+        <!-- GALLERY -->
+
+        <div class="container-kat">
+            <h2 class="heading-text-kat" id="gallery">GALLERY</h2>
+            <ul class="image-gallery-kat">
+            <li><img src="Images/gallery1.png" alt="Curl Power, Photo Gallery" />
+            </li>
+            <li><img src="Images/gallery2.png" alt="Curl Power, Photo Gallery" />
+            </li>
+            <li><img src="Images/gallery3.png" alt="Curl Power, Photo Gallery" />
+            </li>
+            <li><img src="Images/gallery4.png" alt="Curl Power, Photo Gallery" />
+            </li>
+            <li><img src="Images/gallery5.png" alt="Curl Power, Photo Gallery" />
+            </li>
+            <li><img src="Images/gallery6.png" alt="Curl Power, Photo Gallery" />
+            </li>
+            <li><img src="Images/gallery7.png" alt="Curl Power, Photo Gallery" />
+            </li>
+            <li><img src="Images/gallery8.png" alt="Curl Power, Photo Gallery" />
+            </li>
+            <li><img src="Images/gallery9.png" alt="Curl Power, Photo Gallery" />
+            </li>
+            </ul>
+        </div>
+
+      <!-- BOOKING FORM -->
+      
+      <h2 class="heading-text-kat" id="book">BOOK YOUR APPOINTMENT TODAY!</h2>
+
+
+      <form id="form" class="topBefore">
+              
+                <input id="name" type="text" placeholder="NAME">
+                <input id="phone" type="text" placeholder="PHONE NUMBER">
+                <textarea id="message" type="text" placeholder="MESSAGE"></textarea>
+        <input id="submit" type="submit" value="GO!">
+        
+      </form>
+      
+      <!-- VIDEO GALLERY -->
+
+      <h2 class="heading-text-kat" id="videos">VIDEO TUTORIALS</h2>
+      <div style="text-align:center;">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/bQobcUhTKOA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/njelGvvkebw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/Q3EbpYw-Jlg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/UKqWNqxm0ek" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <footer>
+        <br><br>
+        <hr>
+        <br><br>
+        <b>CURL POWER &COPY; 2005–2023 | Phoenix, Arizona</b>
+    </footer>
+    </body>
+</html>
