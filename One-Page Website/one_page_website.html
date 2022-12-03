@@ -3,8 +3,8 @@
 	<head>
 		<title>Curl Power—Specialty Salon for Curly Hair in Phoenix, Arizona</title>
 		<meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="one_page_website.css">
-        
+		<link rel="stylesheet" type="text/css" href="OnePage.css">
+    <script src="onePage.js"></script>
         
 	</head>
 	<body>
@@ -28,20 +28,7 @@
 
         <!-- STICKY NAVBAR -->
 
-        <script>
-            window.onscroll = function() {myFunction()};
-            
-            var navbar = document.getElementById("NavBar");
-            var sticky = NavBar.offsetTop;
-            
-            function myFunction() {
-              if (window.pageYOffset >= sticky) {
-                navbar.classList.add("sticky")
-              } else {
-                navbar.classList.remove("sticky");
-              }
-            }
-            </script>
+       
 
         <!-- HEADER IMAGE -->
 
@@ -51,34 +38,108 @@
          
 
         <!-- GALLERY -->
+        <h2 class="curlHead2" id="book">GALLERY</h2>
 
-        <div class="container-kat">
-            <h2 class="heading-text-kat" id="gallery">GALLERY</h2>
-            <ul class="image-gallery-kat">
-            <li><img src="Images/gallery1.png" alt="Curl Power, Photo Gallery" />
-            </li>
-            <li><img src="Images/gallery2.png" alt="Curl Power, Photo Gallery" />
-            </li>
-            <li><img src="Images/gallery3.png" alt="Curl Power, Photo Gallery" />
-            </li>
-            <li><img src="Images/gallery4.png" alt="Curl Power, Photo Gallery" />
-            </li>
-            <li><img src="Images/gallery5.png" alt="Curl Power, Photo Gallery" />
-            </li>
-            <li><img src="Images/gallery6.png" alt="Curl Power, Photo Gallery" />
-            </li>
-            <li><img src="Images/gallery7.png" alt="Curl Power, Photo Gallery" />
-            </li>
-            <li><img src="Images/gallery8.png" alt="Curl Power, Photo Gallery" />
-            </li>
-            <li><img src="Images/gallery9.png" alt="Curl Power, Photo Gallery" />
-            </li>
-            </ul>
-        </div>
+        <!-- display of images outside of lightbox, click to open lightbox -->
 
+<div class="lightRow">
+  <div class="lightCol">
+    <img src="https://www.morlock.dev/JS/lightBox/images/Gallery_1.png" style="width:100%" onclick="openLight();currentLight(1)" class="hover-shadow">
+  </div>
+  <div class="lightCol">
+    <img src="https://www.morlock.dev/JS/lightBox/images/Gallery_2.png" style="width:100%" onclick="openLight();currentLight(2)" class="hover-shadow">
+  </div>
+  <div class="lightCol">
+    <img src="https://www.morlock.dev/JS/lightBox/images/Gallery_3.png" style="width:100%" onclick="openLight();currentLight(3)" class="hover-shadow">
+  </div>
+  <div class="lightCol">
+    <img src="https://www.morlock.dev/JS/lightBox/images/Gallery_4.png" style="width:100%" onclick="openLight();currentLight(4)" class="hover-shadow cursor">
+  </div>
+</div>
+
+<div class="lightCaptionSmall">Click an image to open our portfolio gallery.</div>
+
+
+<!-- this is the lightbox that pops up when you click on one of the photos -->
+
+<div id="lightBox" class="theLightBox">
+  <span class="closeBox" onclick="closeLight()">&times;</span>
+  
+  <!-- big images that display
+        dimensions: 1000 x 350 -->
+  
+  <div class="lightImgL">
+    
+    <!-- the slide up top -->
+    
+    <div class="lightSlides">
+    
+      <div class="lightCurrent">1 / 4</div>
+    
+      <img class="largeLightImgTop" src="https://www.morlock.dev/JS/lightBox/images/Gallery_1_wide.png" alt="Stylist: Elyse Crow / Photography: Jensen Graves">
+    </div>
+    
+    <div class="lightSlides">
+    
+      <div class="lightCurrent">2 / 4</div>
+    
+      <img class="largeLightImgTop" src="https://www.morlock.dev/JS/lightBox/images/Gallery_2_wide.png" alt="Stylist: Ericka Baker / Photography: Jensen Graves">
+    </div>
+    
+    <div class="lightSlides">
+    
+      <div class="lightCurrent">3 / 4</div>
+    
+      <img class="largeLightImgTop" src="https://www.morlock.dev/JS/lightBox/images/Gallery_3_wide.png" alt="Stylist: Linzie Norman / Photography: Jensen Graves">
+    </div>
+    
+    <div class="lightSlides">
+    
+      <div class="lightCurrent">4 / 4</div>
+    
+      <img class="largeLightImgTop" src="https://www.morlock.dev/JS/lightBox/images/Gallery_4_wide.png" alt="Stylist: Ericka Baker / Photography: Jensen Graves">
+    </div>
+    
+    
+    
+    <!-- next / previous buttons and calls to JS function -->
+    
+    <a class="prevBtn" onclick="plusLight(-1)">&#10094;</a>
+    <a class="nextBtn" onclick="plusLight(1)">&#10095;</a>
+    
+    <!-- for displaying captions -->
+    
+    <div class="Captions">
+      <p id="displayCaption"></p> <!-- JS will use the IMG ALTs to populate this -->
+    </div>
+    
+    <!-- lower thumbnails in lightbox? -->
+    
+    <div class="lightCol">
+      <img class="largeLightImgThumb" src="https://www.morlock.dev/JS/lightBox/images/Gallery_1_wide.png" style="width:100%" onclick="currentLight(1)" alt="Stylist: Elyse Crow / Photography: Jensen Graves">
+    </div>
+    
+    <div class="lightCol">
+      <img class="largeLightImgThumb" src="https://www.morlock.dev/JS/lightBox/images/Gallery_2_wide.png" style="width:100%" onclick="currentLight(2)" alt="Stylist: Ericka Baker / Photography: Jensen Graves">
+    </div>
+    
+    <div class="lightCol">
+      <img class="largeLightImgThumb" src="https://www.morlock.dev/JS/lightBox/images/Gallery_3_wide.png" style="width:100%" onclick="currentLight(3)" alt="Stylist: Linzie Norman / Photography: Jensen Graves">
+    </div>
+    
+    <div class="lightCol">
+      <img class="largeLightImgThumb" src="https://www.morlock.dev/JS/lightBox/images/Gallery_4_wide.png" style="width:100%" onclick="currentLight(4)" alt="Stylist: Ericka Baker / Photography: Jensen Graves">
+    </div>
+
+  </div>
+  
+  
+</div>
+
+  
       <!-- BOOKING FORM -->
       
-      <h2 class="heading-text-kat" id="book">BOOK YOUR APPOINTMENT TODAY!</h2>
+      <h2 class="curlHead2" id="book">BOOK YOUR APPOINTMENT TODAY!</h2>
 
 
       <form id="form" class="topBefore">
@@ -92,7 +153,7 @@
       
       <!-- VIDEO GALLERY -->
 
-      <h2 class="heading-text-kat" id="videos">VIDEO TUTORIALS</h2>
+      <h2 class="curlHead2" id="videos">VIDEO TUTORIALS</h2>
       <div style="text-align:center;">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/bQobcUhTKOA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/njelGvvkebw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
